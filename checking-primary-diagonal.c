@@ -25,7 +25,7 @@ int main()
             {
                 if (i == j)
                 {
-                    // in diagonal
+                    // in primary diagonal
                 }
                 else
                 {
