@@ -1,7 +1,64 @@
-#include<stdio.h>
+// Checking Scalar Matrix or not
 
-int main(){
+#include <stdio.h>
 
-    
-     return 0;
+int main()
+{
+
+    int r, c;
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    int sameDigit = a[0][0];
+
+    int flag = 1;
+
+    if (r == c)
+    {
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                if (i == j)
+                {
+                    // primary diagonal
+                    if (a[i][j] != sameDigit)
+                    {
+                        flag = 0;
+                    }
+                }
+
+                if (i != j)
+                {
+                    if (a[i][j] != 0)
+                    {
+                        flag = 0;
+                    }
+                }
+            }
+        }
+    }
+
+    if (r != c)
+    {
+        flag = 0;
+    }
+    if (flag == 1)
+    {
+        printf("Scalar Matrix");
+    }
+    else
+    {
+        printf("Not scalar");
+    }
+
+    return 0;
 }

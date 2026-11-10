@@ -1,9 +1,7 @@
 
-        for (int j = 0; j < c; j++)
-        {
-            if (a[i][j] == 0)
-            {
-                zero_count++;
-            }
-        }
-    
+                    // primary diagonal
+                    if (a[i][j] != sameDigit)
+                    {
+                        flag = 0;
+                    }
+                
